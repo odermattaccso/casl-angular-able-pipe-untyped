@@ -12,6 +12,11 @@ export class AppComponent implements OnInit {
 
   readonly title = 'typed-able-pipe';
   readonly now$ = timer(0, 1000).pipe(map(() => new Date()));
+  readonly unorderedPeople = [
+    { name: 'John', age: 20 },
+    { name: 'Smith', age: 21 },
+    { name: 'Jane', age: 19 },
+  ];
 
   ngOnInit(): void {
     this.appAbilityService.update();

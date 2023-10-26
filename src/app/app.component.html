@@ -17,6 +17,12 @@
 <p>{{ title | randomizeLetters }}</p>
 <p>{{ now$ | async | date: 'YYYY/MM/dd HH:mm:ss' }}</p>
 
+<!-- example of similar typing issue with order type, see order.pipe.ts for an alternative, working solution -->
+<div style="margin-top: 2rem; margin-bottom: 2rem">
+  People:
+  <p *ngFor="let person of unorderedPeople | order: 'age':'desc'">{{ person.name }} (age {{ person.age }})</p>
+</div>
+
 <h1>CASL able Pipe</h1>
 
 <!-- able Pipe doesn't show any tooltip on hover, nor can you navigate to its definition? -->

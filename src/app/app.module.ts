@@ -6,9 +6,10 @@ import { AbilityModule } from '@casl/angular';
 import { RandomizeLettersPipe } from './pipes/randomize-letters.pipe';
 import { AppAbility } from './casl/appAbility';
 import { PureAbility } from '@casl/ability';
+import { OrderPipe } from './pipes/order.pipe';
 
 @NgModule({
-  declarations: [AppComponent, RandomizeLettersPipe],
+  declarations: [AppComponent, RandomizeLettersPipe, OrderPipe],
   imports: [BrowserModule, AbilityModule],
   providers: [
     {
